@@ -1,0 +1,48 @@
+----------------------------------------------
+SELLECT ALL THE HTML CORD COPPY AND PASTE YOR HTML VIEWER
+---------------------------------------------
+https://codebeautify.org/htmlviewer 
+----------------------------------------
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <script>
+      function calculate() {
+        var num1 = parseFloat(document.getElementById("num1").value);
+        var num2 = parseFloat(document.getElementById("num2").value);
+        var operator = document.getElementById("operator").value;
+        var result;
+
+        if (operator === "+") {
+          result = num1 + num2;
+        } else if (operator === "-") {
+          result = num1 - num2;
+        } else if (operator === "*") {
+          result = num1 * num2;
+        } else if (operator === "/") {
+          result = num1 / num2;
+        }
+
+        document.getElementById("result").value = result;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Calculator</h1>
+    <form>
+      <input type="number" id="num1" />
+      <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+      </select>
+      <input type="number" id="num2" />
+      <button type="button" onclick="calculate()">Calculate</button>
+      <input type="number" id="result" />
+    </form>
+  </body>
+</html>
